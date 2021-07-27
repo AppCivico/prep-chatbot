@@ -59,7 +59,7 @@ async function checkMainMenu(context) {
 			const index = opt.findIndex((x) => x.payload === 'beginQuiz');
 			if (context.state.user.is_target_audience === 0) {
 				if (!context.state.quizBrincadeiraEnd) { if (typeof index === 'number') opt[index] = quizBrincadeira; } else
-				if (!context.state.preCadastroSignature) { if (typeof index === 'number') opt[index] = termos; }
+					if (!context.state.preCadastroSignature) { if (typeof index === 'number') opt[index] = termos; }
 				const indexJoin = opt.findIndex((x) => x.payload === 'join'); if (typeof indexJoin === 'number') opt.splice(indexJoin, 1);
 				const indexProjeto = opt.findIndex((x) => x.payload === 'noProjeto'); if (typeof indexProjeto === 'number') opt.splice(indexProjeto, 1);
 			}
@@ -103,9 +103,9 @@ async function checkMainMenu(context) {
 		if (context.state.user.voucher_type === 'sisprep') {
 			opt = [baterPapo, duvidaPrep, deuRuimPrep, autoteste, voltarTomarPrep, alarmePrep];
 		} else if (context.state.user.voucher_type === 'combina') {
-			opt = [baterPapo, duvidaPrep, deuRuimPrep, autoteste, voltarTomarPrep, alarmePrep, tomeiPrep];
+			opt = [baterPapo, duvidaPrep, deuRuimNaoPrep, autoteste, voltarTomarPrep, alarmePrep, tomeiPrep];
 		} else {
-			opt = [baterPapo, duvidaPrep, deuRuimPrep, autoteste, voltarTomarPrep, alarmePrep];
+			opt = [baterPapo, duvidaPrep, deuRuimNaoPrep, autoteste, voltarTomarPrep, alarmePrep];
 		}
 	} else if (context.state.user.is_prep === 0) {
 		opt = [baterPapo, duvidaNaoPrep, deuRuimNaoPrep, autoteste];
