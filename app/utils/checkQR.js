@@ -72,7 +72,7 @@ async function checkMainMenu(context) {
                 }
 
                 await context.setState({ temConsulta: await checkAppointment(context.session.user.id) });
-                if (!context.state.temConsulta && !context.state.leftContact) {
+                if (!context.state.temConsulta) {
                     if (index) {
                         opt.splice(index, 0, marcarConsulta);
                         opt.splice(index + 1, 0, deixarContato);
