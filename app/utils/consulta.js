@@ -9,6 +9,7 @@ const aux = require('./consulta-aux');
 const { sendMain } = require('./mainMenu');
 const { sentryError } = require('./error');
 const mainMenu = require('./mainMenu');
+const mailer = require('./mailer');
 
 async function sendSalvador(context) {
 	if (context.state.user && context.state.user.city && context.state.user.city.toString() === '2') { await context.sendText(flow.consulta.salvadorMsg); }
@@ -103,6 +104,19 @@ async function finalDate(context, quota) { // where we actually schedule the con
 		await sendSalvador(context);
 		await sendExtraMessages(context);
 		await context.typing(1000 * 3);
+
+        let city;
+        if (context.user.city) {
+            city = context.user.city
+        }
+        else if (context.user.combina_city) {
+            city = context.user.combina_city
+        }
+        else {
+            city = 3 // SP
+        }
+
+        await mailer.sendMail("Amanda Selfie [PREP] - Nova consulta", msg, city);
 
 		// after consulta, go to menu
 		await sendMain(context);
