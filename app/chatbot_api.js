@@ -11,8 +11,6 @@ const makeRequest = async (opt) => {
     if (opt.params) opt.params.security_token = security_token;
     // const result = axios(opt).then((res) => res).catch((err) => err.response);
     const result = await axios(opt);
-    console.log('req para MA');
-    console.log(result);
     return handleRequestAnswer(result);
   } catch (error) {
     console.log('Erro na requisição:', { opt, error });
