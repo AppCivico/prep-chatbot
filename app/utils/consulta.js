@@ -106,11 +106,11 @@ async function finalDate(context, quota) { // where we actually schedule the con
 		await context.typing(1000 * 3);
 
         let city;
-        if (context.user.city) {
-            city = context.user.city
+        if (context.state.user.city) {
+            city = context.state.user.city
         }
         else if (context.user.combina_city) {
-            city = context.user.combina_city
+            city = context.state.user.combina_city
         }
         else {
             city = 3 // SP
