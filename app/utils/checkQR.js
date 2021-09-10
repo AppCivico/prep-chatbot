@@ -85,6 +85,10 @@ async function checkMainMenu(context) {
                     opt.splice(index + 1, 0, verConsulta);
                 }
 
+                if (context.state.leftContact) {
+                    opt.splice(index, 0, marcarConsulta);
+                }
+
                 // dont let the beginQuiz appear if it's target_audience
                 const index2 = opt.findIndex((x) => x.payload === 'beginQuiz');
                 if (index2) opt.splice(index2, 1);
