@@ -21,7 +21,7 @@
     "@sentry/node": "^5.15.4",
     "apiai-promise": "^1.0.0",
     "async-child-process": "^1.1.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.2",
     "body-parser": "^1.19.0",
     "bottender": "^1.4.10",
     "child_process": "^1.0.2",
