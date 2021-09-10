@@ -42,7 +42,6 @@ async function handleRequestAnswer(response) {
   try {
     const { status } = response;
     const { data } = await response;
-    console.log(response);
     await handleErrorApi(response.config, data, status, false);
     return data;
   } catch (error) {
