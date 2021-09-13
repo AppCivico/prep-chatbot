@@ -283,6 +283,12 @@ module.exports = async function App(context) {
           await context.sendText(flow.greetings.text1);
           await context.sendText(flow.greetings.text2);
           await mainMenu.sendMain(context);
+
+          if (!context.state.preCadastroSignature) { // garantee we won't send TCLE more than once
+            await context.setState({ recrutamentoTimer: true }); // store this key in both local state and api
+            await MaAPI.postRecipientMA(context.state.politicianData.user_id, { fb_id: context.session.user.id, session: { recrutamentoTimer: context.state.recrutamentoTimer } });
+            await timer.createRecrutamentoTimer(context.session.user.id, context); // create recrutamento timer if it wasn't created already (and if TCLE was never sent)
+          }
           // await desafio.asksDesafio(context);
           break;
         case 'medicaçao':
