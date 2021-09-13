@@ -336,7 +336,12 @@ module.exports = async function App(context) {
           await context.sendText(flow.join.intro.text1, await getQR(flow.join.intro));
           break;
         case 'join2':
+          await context.sendText(flow.join.alternatives);
           await context.sendText(flow.join.intro.text2, await getQR(flow.join.intro));
+          break;
+        case 'centers':
+          await context.sendText(flow.join.centers);
+          await mainMenu.sendMain(context);
           break;
         case 'joinPrep': // já faço parte
           await context.sendText(flow.join.joinPrep.text1);

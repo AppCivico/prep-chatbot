@@ -241,7 +241,9 @@ module.exports = {
 		text1: 'Ihhh. Deu um bug interno aqui comigo. Tente novamente, pliiiss',
 	},
 	join: {
-		end: 'agora q sei onde vc ta tomando prep, vou te oferecer alguns apoios pra te ajudar nisso',
+        alternatives: 'Caso você tome PrEP, mas não participe do Projeto “PrEP 15-19” nem do projeto “Combina”, não tem problema, eu ainda posso te acompanhar nesse processo, é só você indicar que você toma PrEP pelo SUS',
+		centers: 'CTR DIP Orestes Diniz na Alameda Álvaro Celso, 241, Santa Efigênia. TEL: 31 3277-4341 ou Hospital Eduardo de Menezes na Rua Dr Cristiano Rezende, 2213, Bonsucesso. TEL: 31 3328-5000.\nCedap - Rua Comendador José Alves Ferreira, 240, Garcia - 08h às 17h. TEL: 71 3116-8888\nProcure serviços de saúde nas capitais: SP: https://www.prefeitura.sp.gov.br/cidade/secretarias/saude/dstaids/index.php?p=248175.',
+        end: 'agora q sei onde vc ta tomando prep, vou te oferecer alguns apoios pra te ajudar nisso',
 		intro: {
 			text1: 'Que bafo! Por aki posso disponibilizar auto teste, tirar dúvidas, te agendar com humanes, te ajudar a lembrar de tomar prep e outras coisas, tanto pra vc e seus amigues. Me indica! Pra começar, me diz por onde vc toma?',
 			text2: 'Me diz por onde vc toma?',
@@ -250,8 +252,8 @@ module.exports = {
 		},
 		joinPrep: {
 			text1: 'PrEP 15-19 é um projeto para reduzir a incidência de HIV entre jovens gays ou bissexuais cisgêneros, travestis e mulheres trans entre 15 e 19 anos. O Bapho é saber se a galera conhece e aceita usar a PrEP e também outros métodos de prevenção às ISTs!',
-			menuOptions: ['Não tenho Voucher'],
-			menuPostback: ['join2'],
+			menuOptions: ['Não tenho Voucher', 'ñ lembro meu voucher'],
+			menuPostback: ['join2', 'centers'],
 		},
 		askPrep: {
 			text1: 'Inhaiii! Pra vc q adquiriu lindamente seu voucher no serviço, digita ele aqui pra mim amore! Ou se não lembrar peça esse numero para a equipe de humanes onde você é atendido e clica no botão abaixo para voltar ao menu',
@@ -259,8 +261,8 @@ module.exports = {
 			fail1: 'Vish, kd tu nesse systema? Vamo denovo? Digita aí o número do voucher.',
 			fail2: 'Ou se não lembrar peça esse numero para a equipe de humanes onde você é atendido e clica no botão abaixo para voltar ao menu',
 			view: 'Bb, pega seu voucher: ',
-			menuOptions: ['Não tenho Voucher'],
-			menuPostback: ['join2'],
+			menuOptions: ['Não tenho Voucher', 'ñ lembro meu voucher'],
+			menuPostback: ['join2', 'centers'],
 		},
 		joinCombina: {
 			text1: 'O estudo Combina faz parte de uma pesquisa que avalia o uso dos métodos de prevenção ao HIV disponíveis nos serviços públicos de saúde. Saber as motivações e em quais situações são usados esses métodos tbm é super importante! Esse projeto é tudo de bom!',
@@ -274,8 +276,8 @@ module.exports = {
 			success: 'Eitaaa, te encontrei no systema, q tudo!!',
 			fail1: 'Vish, kd tu nesse systema? Vamo denovo? Digita aí o número do voucher.',
 			fail2: 'Ou se não lembrar peça esse numero para a equipe de humanes onde você é atendido e clica no botão abaixo para voltar ao menu',
-			menuOptions: ['Não tenho Voucher'],
-			menuPostback: ['join2'],
+			menuOptions: ['Não tenho Voucher', 'ñ lembro meu voucher'],
+			menuPostback: ['join2', 'centers'],
 		},
 		joinSUS: {
 			text1: 'SUS é o Sistema Único de Saúde, é gratuito para toda a população do Brasil e vc pode acessar pelo Hospital, UPA, posto de saúde, CTA etc',
