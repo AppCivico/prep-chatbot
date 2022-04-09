@@ -37,7 +37,7 @@
     "jsonfile": "^5.0.0",
     "messaging-api-messenger": "^0.7.16",
     "minimist": "^1.2.5",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-google-calendar": "^1.1.1",
     "nodemailer": "^6.3.1",
     "nodemon": "^1.19.4",
