@@ -30,7 +30,7 @@
     "dotenv": "^4.0.0",
     "encodeurl": "^1.0.2",
     "event-stream": "^4.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "fs-extra": "^7.0.1",
     "get-audio-duration": "0.0.1",
     "grpc": "^1.24.2",
